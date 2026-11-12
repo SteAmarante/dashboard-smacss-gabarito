@@ -1,0 +1,6 @@
+// Módulos genéricos primeiro: quem é usado dentro de outros (btn) vem antes,
+// para que .header__toggle consiga sobrescrever o display do .btn.
+@forward 'btn';
+@forward 'card';
+@forward 'sidebar';
+@forward 'header';

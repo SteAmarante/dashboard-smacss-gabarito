@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+// Modificadores BEM = variações escolhidas no HTML
+$variantes: ('primary', 'outline');
+
+.btn {
+  display: inline-block;
+  padding: var(--dsc-espaco-3) var(--dsc-espaco-5);
+  border: 2px solid transparent;
+  border-radius: var(--dsc-raio-s);
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease-out;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include foco-visivel;
+
+  @each $v in $variantes {
+    &--#{$v} {
+      border-color: var(--dsc-btn-#{$v}-borda);
+      background-color: var(--dsc-btn-#{$v}-fundo);
+      color: var(--dsc-btn-#{$v}-texto);
+    }
+  }
+
+  &--primary:hover {
+    background-color: var(--dsc-cor-acao-primaria-hover);
+  }
+}

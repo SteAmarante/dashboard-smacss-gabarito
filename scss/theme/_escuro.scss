@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+// Theme switcher: só redefine tokens. Nenhum módulo é citado aqui.
+@mixin tema-escuro {
+  --dsc-cor-fundo: #{cor('grafite-900')};
+  --dsc-cor-superficie: #{cor('grafite-800')};
+  --dsc-cor-texto: #{cor('cinza-050')};
+  --dsc-cor-texto-suave: #{cor('cinza-300')};
+  --dsc-cor-borda: #{cor('grafite-700')};
+  --dsc-cor-destaque: #{cor('azul-300')};
+  --dsc-cor-acao-primaria: #{cor('azul-300')};
+  --dsc-cor-acao-primaria-hover: #{cor('azul-500')};
+  --dsc-header-fundo: #{cor('grafite-800')};
+  --dsc-btn-primary-texto: #{cor('grafite-900')};
+}
+
+[data-tema='escuro'] {
+  @include tema-escuro;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema='claro']) {
+    @include tema-escuro;
+  }
+}

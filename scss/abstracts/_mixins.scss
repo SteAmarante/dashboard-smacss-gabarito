@@ -1,0 +1,12 @@
+@mixin foco-visivel {
+  &:focus-visible {
+    outline: 3px solid var(--dsc-cor-foco);
+    outline-offset: 2px;
+  }
+}
+
+@mixin mobile {
+  @media (width <= 48em) {
+    @content;
+  }
+}

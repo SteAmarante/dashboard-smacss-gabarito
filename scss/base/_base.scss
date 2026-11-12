@@ -1,0 +1,14 @@
+body {
+  font-family: var(--dsc-fonte-base);
+  background-color: var(--dsc-cor-fundo);
+  color: var(--dsc-cor-texto);
+
+  // Desafio da aula passada: transição global do tema
+  transition:
+    background-color var(--dsc-duracao-tema) ease,
+    color var(--dsc-duracao-tema) ease;
+}
+
+a {
+  color: var(--dsc-cor-acao-primaria);
+}

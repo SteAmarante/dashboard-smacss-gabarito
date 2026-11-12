@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.sidebar {
+  min-height: 400px;
+  padding: var(--dsc-espaco-5);
+  border: 1px solid var(--dsc-cor-borda);
+  background-color: var(--dsc-cor-superficie);
+
+  &__title {
+    margin-bottom: var(--dsc-espaco-4);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: var(--dsc-espaco-3);
+  }
+
+  &__link {
+    color: var(--dsc-cor-acao-primaria);
+    text-decoration: none;
+
+    // Estado: mudado pelo JS ou pelo roteador
+    &.is-ativo {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  // Desafio da aula passada: sidebar mobile
+  @include mobile {
+    display: none;
+    min-height: 0;
+
+    &.is-aberta {
+      display: block;
+    }
+  }
+}

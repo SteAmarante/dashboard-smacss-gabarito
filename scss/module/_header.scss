@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dsc-espaco-4);
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--dsc-espaco-5);
+  background-color: var(--dsc-header-fundo);
+  color: var(--dsc-cor-texto-invertido);
+  transition: background-color var(--dsc-duracao-tema) ease;
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: var(--dsc-espaco-5);
+    list-style: none;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  // Botão de menu: só existe no mobile
+  &__toggle {
+    display: none;
+  }
+
+  @include mobile {
+    &__toggle {
+      display: inline-block;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}

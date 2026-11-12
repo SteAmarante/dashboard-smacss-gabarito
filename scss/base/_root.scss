@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+:root {
+  @each $nome, $ref in $semanticos {
+    --dsc-cor-#{$nome}: #{cor($ref)};
+  }
+
+  @each $n, $valor in $espacos {
+    --dsc-espaco-#{$n}: #{rem($valor)};
+  }
+
+  @each $nome, $valor in $raios {
+    --dsc-raio-#{$nome}: #{$valor};
+  }
+
+  --dsc-fonte-base: #{$fonte-base};
+  --dsc-sombra-elevada: 0 10px 20px rgb(0 0 0 / 8%);
+  --dsc-duracao-tema: 0.3s;
+
+  // Camada 3: tokens de componente
+  --dsc-btn-primary-fundo: var(--dsc-cor-acao-primaria);
+  --dsc-btn-primary-texto: var(--dsc-cor-texto-invertido);
+  --dsc-btn-primary-borda: var(--dsc-cor-acao-primaria);
+  --dsc-btn-outline-fundo: transparent;
+  --dsc-btn-outline-texto: currentcolor;
+  --dsc-btn-outline-borda: currentcolor;
+  --dsc-header-fundo: var(--dsc-cor-destaque);
+}

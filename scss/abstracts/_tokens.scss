@@ -1,0 +1,38 @@
+// [DSC] Valores ILUSTRATIVOS, herdados do projeto da aula passada.
+// Substituir pelos tokens oficiais do DSC Caixa.
+
+// Camada 1: primitivos (o que existe na paleta)
+$primitivos: (
+  'azul-300': #85c1e9,
+  'azul-500': #3498db,
+  'azul-600': #2980b9,
+  'ardosia-700': #34495e,
+  'ardosia-800': #2c3e50,
+  'cinza-050': #f4f4f9,
+  'cinza-300': #ccc,
+  'cinza-500': #666,
+  'cinza-700': #333,
+  'grafite-700': #3a3a3a,
+  'grafite-800': #1e1e1e,
+  'grafite-900': #121212,
+  'branco': #fff,
+);
+
+// Camada 2: semânticos (para que serve)
+$semanticos: (
+  'fundo': 'cinza-050',
+  'superficie': 'branco',
+  'texto': 'cinza-700',
+  'texto-suave': 'cinza-500',
+  'texto-invertido': 'branco',
+  'borda': 'cinza-300',
+  'destaque': 'ardosia-800',
+  'acao-primaria': 'azul-500',
+  'acao-primaria-hover': 'azul-600',
+  'foco': 'azul-600',
+);
+
+// Escalas
+$espacos: (1: 4px, 2: 8px, 3: 12px, 4: 16px, 5: 20px, 6: 30px);
+$raios: ('s': 4px, 'm': 8px);
+$fonte-base: arial, sans-serif;

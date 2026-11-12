@@ -1,0 +1,15 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'tokens';
+
+@function cor($nome) {
+  @if not map.has-key(tokens.$primitivos, $nome) {
+    @error 'Primitivo "#{$nome}" não existe em $primitivos.';
+  }
+
+  @return map.get(tokens.$primitivos, $nome);
+}
+
+@function rem($px) {
+  @return math.div($px, 16px) * 1rem;
+}
